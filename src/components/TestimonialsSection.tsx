@@ -45,7 +45,7 @@ const TestimonialsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Feedback <span className="text-gradient-gold">Khách Hàng</span>
           </h2>
           <div className="divider-gold mt-6" />
@@ -69,12 +69,12 @@ const TestimonialsSection = () => {
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                  <span className="font-serif font-bold text-primary-foreground">
+                  <span className="font-bold text-primary-foreground">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <h4 className="font-serif font-semibold text-foreground">
+                  <h4 className="font-semibold text-foreground">
                     {testimonial.name}
                   </h4>
                   <p className="text-sm text-muted-foreground">

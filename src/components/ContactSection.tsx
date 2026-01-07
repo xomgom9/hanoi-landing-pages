@@ -37,7 +37,7 @@ const ContactSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
               Nhận Tư Vấn & <span className="text-gradient-gold">Báo Giá</span>
             </h2>
             <div className="divider-gold mt-6" />
@@ -51,7 +51,7 @@ const ContactSection = () => {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h3 className="font-serif text-2xl font-semibold text-foreground">
+              <h3 className="text-2xl font-semibold text-foreground">
                 Liên hệ ngay với chúng tôi
               </h3>
               <p className="text-muted-foreground">

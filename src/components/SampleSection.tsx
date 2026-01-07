@@ -41,11 +41,11 @@ const SampleSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Mẫu Đá <span className="text-gradient-gold">Chi Tiết</span>
           </h2>
           <div className="divider-gold mt-6" />
-          <p className="text-muted-foreground mt-6 text-xl font-serif">
+          <p className="text-muted-foreground mt-6 text-xl">
             4 Lý Do Bạn Nên Xem Vân Mẫu
           </p>
         </motion.div>
@@ -83,7 +83,7 @@ const SampleSection = () => {
                   <reason.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-1">
+                  <h3 className="text-lg font-semibold text-foreground mb-1">
                     {reason.title}
                   </h3>
                   <p className="text-sm text-muted-foreground">
