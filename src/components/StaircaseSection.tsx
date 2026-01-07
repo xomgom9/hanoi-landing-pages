@@ -44,7 +44,7 @@ const StaircaseSection = () => {
           <span className="inline-block px-4 py-2 rounded-full border border-primary/30 text-primary text-sm font-medium mb-4">
             Ứng dụng
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Lát Cầu Thang <span className="text-gradient-gold">Đá Thạch Anh</span>
           </h2>
           <div className="divider-gold mt-6" />
@@ -86,7 +86,7 @@ const StaircaseSection = () => {
                   <feature.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
                     {feature.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">

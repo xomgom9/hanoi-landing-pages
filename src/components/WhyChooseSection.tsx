@@ -44,7 +44,7 @@ const WhyChooseSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Lý do chọn <span className="text-gradient-gold">Đá Thạch Anh Khang Minh</span>
           </h2>
           <div className="divider-gold mt-6" />
@@ -63,7 +63,7 @@ const WhyChooseSection = () => {
               <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-6">
                 <reason.icon className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 {reason.title}
               </h3>
               <p className="text-muted-foreground text-sm">

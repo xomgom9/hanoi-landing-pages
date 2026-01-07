@@ -37,7 +37,7 @@ const ProjectsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Công Trình <span className="text-gradient-gold">Thực Tế Tiêu Biểu</span>
           </h2>
           <div className="divider-gold mt-6" />
@@ -65,7 +65,7 @@ const ProjectsSection = () => {
                 <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold mb-3">
                   {project.category}
                 </span>
-                <h3 className="font-serif text-xl font-semibold text-foreground">
+                <h3 className="text-xl font-semibold text-foreground">
                   {project.title}
                 </h3>
               </div>
