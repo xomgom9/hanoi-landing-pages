@@ -48,7 +48,7 @@ const HeroSection = () => {
             </p>
           </motion.div>
 
-          <motion.ul className="space-y-3 mb-10" initial={{
+          <motion.ul className="flex flex-col gap-3 mb-10" initial={{
           opacity: 0,
           y: 30
         }} animate={{
@@ -58,7 +58,7 @@ const HeroSection = () => {
           duration: 0.8,
           delay: 0.4
         }}>
-            {benefits.map((benefit, index) => <li key={index} className="inline-flex items-center gap-3 bg-background/10 backdrop-blur-sm border border-primary/30 rounded-full px-5 py-2.5">
+            {benefits.map((benefit, index) => <li key={index} className="flex items-center gap-3 bg-background/10 backdrop-blur-sm border border-primary/30 rounded-full px-5 py-2.5 w-full max-w-xl">
                 <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
                   <Check className="w-3 h-3 text-primary" />
                 </div>
