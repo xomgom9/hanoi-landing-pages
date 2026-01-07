@@ -70,8 +70,7 @@ export default {
         cream: "hsl(var(--cream))",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Roboto', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
