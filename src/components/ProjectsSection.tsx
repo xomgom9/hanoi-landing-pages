@@ -7,21 +7,21 @@ import heroImage from "@/assets/hero-staircase.jpg";
 import quartzImage from "@/assets/quartz-sample.jpg";
 
 const staircaseProjects = [
-  { image: staircaseImage },
-  { image: heroImage },
-  { image: quartzImage },
-  { image: staircaseImage },
-  { image: heroImage },
-  { image: quartzImage },
+  { image: staircaseImage, size: "tall" },
+  { image: heroImage, size: "normal" },
+  { image: quartzImage, size: "normal" },
+  { image: staircaseImage, size: "normal" },
+  { image: heroImage, size: "tall" },
+  { image: quartzImage, size: "normal" },
 ];
 
 const elevatorProjects = [
-  { image: elevatorImage },
-  { image: quartzImage },
-  { image: elevatorImage },
-  { image: quartzImage },
-  { image: elevatorImage },
-  { image: quartzImage },
+  { image: elevatorImage, size: "normal" },
+  { image: quartzImage, size: "tall" },
+  { image: elevatorImage, size: "normal" },
+  { image: quartzImage, size: "normal" },
+  { image: elevatorImage, size: "normal" },
+  { image: quartzImage, size: "tall" },
 ];
 
 const ProjectsSection = () => {
@@ -79,9 +79,9 @@ const ProjectsSection = () => {
           </div>
         </motion.div>
 
-        {/* Projects Grid - 2 rows x 3 columns */}
+        {/* Masonry Grid */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8"
+          className="columns-2 md:columns-3 gap-4 mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -89,12 +89,14 @@ const ProjectsSection = () => {
           {currentProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-white p-[5px] shadow-sm"
+              className="bg-white p-[5px] shadow-sm mb-4 break-inside-avoid"
             >
               <img
                 src={project.image}
                 alt={`Công trình ${index + 1}`}
-                className="w-full aspect-square object-cover"
+                className={`w-full object-cover ${
+                  project.size === "tall" ? "aspect-[3/4]" : "aspect-square"
+                }`}
               />
             </div>
           ))}
