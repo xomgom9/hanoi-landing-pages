@@ -26,7 +26,7 @@ const HeroSection = () => {
           duration: 0.8
         }}>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight mb-4 font-sans md:text-5xl text-left">
-              <span className="text-gradient-gold">Đá Thạch Anh Lát Cầu Thang</span>
+              Đá Thạch Anh Lát Cầu Thang
               <br />
               <span className="text-gradient-gold text-6xl">& Ốp Thang Máy</span>
             </h1>
