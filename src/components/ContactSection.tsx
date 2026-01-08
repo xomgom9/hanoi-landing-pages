@@ -40,7 +40,7 @@ const ContactSection = () => {
             <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
               Nhận Tư Vấn & Báo Giá
             </h2>
-            <div className="divider-gold mt-6" />
+            <div className="divider-gold mt-2" />
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12">

@@ -40,7 +40,7 @@ const ProjectsSection = () => {
           <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Công Trình Thực Tế Tiêu Biểu
           </h2>
-          <div className="divider-gold mt-6" />
+          <div className="divider-gold mt-2" />
         </motion.div>
 
         {/* Projects Grid */}
