@@ -45,14 +45,14 @@ const StaircaseSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-[#f9d577] text-[#1f4667] text-[18px] font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-[#f9d577] text-[#1f4667] text-[18px] font-medium mb-2">
             Ứng dụng
           </span>
-          <h2 className="text-[44px] font-bold mb-4" style={{ color: '#f9d577' }}>
+          <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 500 }}>
             Lát Cầu Thang Đá Thạch Anh
           </h2>
-          <div className="divider-gold mt-6" />
-          <p className="text-white text-[21px] mt-6 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
+          <div className="divider-gold mt-2" />
+          <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             Phù hợp nhà đang hoàn thiện phần thô – hoàn thiện nội thất cầu thang bộ
           </p>
         </motion.div>
