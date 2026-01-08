@@ -97,8 +97,8 @@ const WhyChooseSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 bg-white/80 hover:bg-white" />
-            <CarouselNext className="right-2 bg-white/80 hover:bg-white" />
+            <CarouselPrevious className="left-2 bg-white border-[#1f4667] text-[#1f4667] hover:bg-[#1f4667] hover:text-white" />
+            <CarouselNext className="right-2 bg-white border-[#1f4667] text-[#1f4667] hover:bg-[#1f4667] hover:text-white" />
           </Carousel>
         </motion.div>
 
