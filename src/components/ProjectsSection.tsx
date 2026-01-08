@@ -41,9 +41,13 @@ const ProjectsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[44px] mb-6" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+          <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Công Trình Thực Tế Tiêu Biểu
           </h2>
+          <div className="divider-gold mt-2" />
+          <p className="text-[#1f4667] text-[21px] mt-2 mb-4 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
+            Những dự án đã hoàn thiện với đá thạch anh cao cấp
+          </p>
         </motion.div>
 
         {/* Tabs */}
