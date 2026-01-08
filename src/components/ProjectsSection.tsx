@@ -48,18 +48,18 @@ const ProjectsSection = () => {
 
         {/* Tabs */}
         <motion.div
-          className="flex justify-center mb-8"
+          className="mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="flex border-2 border-[#1f4667] overflow-hidden">
+          <div className="flex w-full">
             <button
               onClick={() => setActiveTab("staircase")}
-              className={`px-8 py-3 text-sm font-semibold transition-colors ${
+              className={`flex-1 px-8 py-3 text-sm font-semibold transition-colors border-2 border-[#1f4667] ${
                 activeTab === "staircase"
-                  ? "bg-[#1f4667] text-white"
-                  : "bg-white text-[#1f4667] hover:bg-[#1f4667]/10"
+                  ? "bg-[#1f4667] text-[#f9d577]"
+                  : "bg-transparent text-[#1f4667]"
               }`}
               style={{ fontFamily: "'Times New Roman', serif" }}
             >
@@ -67,10 +67,10 @@ const ProjectsSection = () => {
             </button>
             <button
               onClick={() => setActiveTab("elevator")}
-              className={`px-8 py-3 text-sm font-semibold transition-colors ${
+              className={`flex-1 px-8 py-3 text-sm font-semibold transition-colors border-2 border-[#1f4667] border-l-0 ${
                 activeTab === "elevator"
-                  ? "bg-[#1f4667] text-white"
-                  : "bg-white text-[#1f4667] hover:bg-[#1f4667]/10"
+                  ? "bg-[#1f4667] text-[#f9d577]"
+                  : "bg-transparent text-[#1f4667]"
               }`}
               style={{ fontFamily: "'Times New Roman', serif" }}
             >
