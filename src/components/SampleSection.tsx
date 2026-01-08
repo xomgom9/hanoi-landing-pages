@@ -59,9 +59,13 @@ const SampleSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[44px] mb-4" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+          <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Mẫu Đá Chi Tiết
           </h2>
+          <div className="divider-gold mt-2" />
+          <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
+            Khám phá bộ sưu tập đá thạch anh đa dạng màu sắc & vân đá
+          </p>
         </motion.div>
 
         {/* Samples Carousel */}

@@ -40,10 +40,11 @@ const ReasonsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[44px] mb-4" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+          <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             4 Lý Do
           </h2>
-          <p className="text-white text-2xl md:text-3xl font-semibold">
+          <div className="divider-gold mt-2" />
+          <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             Bạn Nên Xem Vân Mẫu
           </p>
         </motion.div>
