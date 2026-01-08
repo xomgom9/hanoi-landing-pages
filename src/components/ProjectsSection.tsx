@@ -136,11 +136,11 @@ const ProjectsSection = () => {
             className="group relative inline-flex items-center justify-center px-12 py-5 rounded-full text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             style={{ fontFamily: "'Times New Roman', serif" }}
           >
-            {/* Animated gradient background - Red/Orange for urgency */}
-            <span className="absolute inset-0 bg-gradient-to-r from-[#e63946] via-[#ff6b6b] to-[#e63946] bg-[length:200%_100%] animate-[shimmer_4s_ease-in-out_infinite]" />
+            {/* Animated gradient background - Orange */}
+            <span className="absolute inset-0 bg-gradient-to-r from-[#ea580c] via-[#f97316] to-[#ea580c] bg-[length:200%_100%] animate-[shimmer_4s_ease-in-out_infinite]" />
             
             {/* Glow effect */}
-            <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[#e63946]/50 via-[#ff6b6b]/50 to-[#e63946]/50 blur-xl" />
+            <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[#ea580c]/50 via-[#f97316]/50 to-[#ea580c]/50 blur-xl" />
             
             {/* Border */}
             <span className="absolute inset-0 rounded-full border-2 border-white/30 group-hover:border-white/50 transition-colors duration-300" />
