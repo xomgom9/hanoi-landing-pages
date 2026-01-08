@@ -45,7 +45,7 @@ const SampleSection = () => {
             Mẫu Đá Chi Tiết
           </h2>
           <div className="divider-gold mt-6" />
-          <p className="text-muted-foreground mt-6 text-xl">
+          <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             4 Lý Do Bạn Nên Xem Vân Mẫu
           </p>
         </motion.div>
