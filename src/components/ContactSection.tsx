@@ -37,8 +37,8 @@ const ContactSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Nhận Tư Vấn & <span className="text-gradient-gold">Báo Giá</span>
+            <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+              Nhận Tư Vấn & Báo Giá
             </h2>
             <div className="divider-gold mt-6" />
           </motion.div>
