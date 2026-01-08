@@ -56,10 +56,10 @@ const ProjectsSection = () => {
           <div className="flex w-full">
             <button
               onClick={() => setActiveTab("staircase")}
-              className={`flex-1 px-8 py-3 text-sm font-semibold transition-colors border-2 border-[#1f4667] ${
+              className={`flex-1 px-8 py-3 text-sm font-semibold border-2 border-white transition-all duration-300 ease-in-out ${
                 activeTab === "staircase"
-                  ? "bg-[#1f4667] text-[#f9d577]"
-                  : "bg-transparent text-[#1f4667]"
+                  ? "bg-[#f9d577] text-[#1f4667] scale-[1.02] shadow-lg"
+                  : "bg-[#1f4667] text-[#f9d577] hover:bg-[#2a5a7a] hover:scale-[1.01]"
               }`}
               style={{ fontFamily: "'Times New Roman', serif" }}
             >
@@ -67,10 +67,10 @@ const ProjectsSection = () => {
             </button>
             <button
               onClick={() => setActiveTab("elevator")}
-              className={`flex-1 px-8 py-3 text-sm font-semibold transition-colors border-2 border-[#1f4667] border-l-0 ${
+              className={`flex-1 px-8 py-3 text-sm font-semibold border-2 border-white transition-all duration-300 ease-in-out ${
                 activeTab === "elevator"
-                  ? "bg-[#1f4667] text-[#f9d577]"
-                  : "bg-transparent text-[#1f4667]"
+                  ? "bg-[#f9d577] text-[#1f4667] scale-[1.02] shadow-lg"
+                  : "bg-[#1f4667] text-[#f9d577] hover:bg-[#2a5a7a] hover:scale-[1.01]"
               }`}
               style={{ fontFamily: "'Times New Roman', serif" }}
             >
