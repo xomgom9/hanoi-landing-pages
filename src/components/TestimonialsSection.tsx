@@ -45,8 +45,8 @@ const TestimonialsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Feedback <span className="text-gradient-gold">Khách Hàng</span>
+          <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+            Feedback Khách Hàng
           </h2>
           <div className="divider-gold mt-6" />
         </motion.div>
