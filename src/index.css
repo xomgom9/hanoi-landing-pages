@@ -127,7 +127,21 @@
   }
 
   .section-navy {
-    background: var(--gradient-navy);
+    background: url('/src/assets/navy-bg-texture.jpg') center/cover no-repeat;
+    position: relative;
+  }
+  
+  .section-navy::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(31, 70, 103, 0.85);
+    z-index: 0;
+  }
+  
+  .section-navy > * {
+    position: relative;
+    z-index: 1;
   }
 
   .card-hover {
