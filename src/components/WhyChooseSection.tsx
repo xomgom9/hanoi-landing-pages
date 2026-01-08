@@ -119,16 +119,18 @@ const WhyChooseSection = () => {
           >
             <CarouselContent className="-ml-4">
               {reasons.map((reason, index) => (
-                <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4">
-                  <div className="border-4 border-[#f9d577] bg-white">
+                <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                  <div className="border-4 border-[#f9d577] bg-white h-full flex flex-col">
                     <div className="p-2 pb-0">
-                      <img 
-                        src={reason.image} 
-                        alt={reason.title}
-                        className="w-full h-[200px] object-cover"
-                      />
+                      <div className="aspect-square overflow-hidden">
+                        <img 
+                          src={reason.image} 
+                          alt={reason.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
-                    <p className="text-[#1f4667] text-[14px] leading-relaxed px-4 py-4">
+                    <p className="text-[#1f4667] text-[14px] leading-relaxed px-4 py-4 flex-1">
                       {reason.title}
                     </p>
                   </div>
