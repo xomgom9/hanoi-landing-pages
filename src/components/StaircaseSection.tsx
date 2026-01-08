@@ -59,7 +59,7 @@ const StaircaseSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="lat-cau-thang" className="py-24 section-navy" ref={ref}>
+    <section id="lat-cau-thang" className="py-16 section-navy" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div

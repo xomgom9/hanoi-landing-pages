@@ -59,7 +59,7 @@ const ElevatorSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="op-thang-may" className="py-24 section-navy" ref={ref}>
+    <section id="op-thang-may" className="py-16 section-navy" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div

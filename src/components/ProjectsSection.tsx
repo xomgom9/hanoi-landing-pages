@@ -33,7 +33,7 @@ const ProjectsSection = () => {
   const currentProjects = activeTab === "staircase" ? staircaseProjects : elevatorProjects;
 
   return (
-    <section id="cong-trinh" className="py-24 relative overflow-hidden" ref={ref}>
+    <section id="cong-trinh" className="py-16 relative overflow-hidden" ref={ref}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
