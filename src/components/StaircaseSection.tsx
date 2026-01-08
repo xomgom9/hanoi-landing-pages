@@ -121,7 +121,7 @@ const StaircaseSection = () => {
                     <img 
                       src={image} 
                       alt={`Cầu thang đá thạch anh ${index + 1}`} 
-                      className="w-full h-[250px] object-cover"
+                      className="w-full aspect-square object-cover"
                     />
                   </div>
                 </CarouselItem>
