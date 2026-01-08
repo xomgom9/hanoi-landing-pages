@@ -117,7 +117,7 @@ const StaircaseSection = () => {
             <CarouselContent className="-ml-4">
               {galleryImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/3">
-                  <div className="bg-white p-[15px] rounded-none">
+                  <div className="bg-white p-[5px] rounded-none">
                     <img 
                       src={image} 
                       alt={`Cầu thang đá thạch anh ${index + 1}`} 
