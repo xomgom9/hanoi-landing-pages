@@ -2,6 +2,14 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Phone } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import staircaseImage from "@/assets/staircase-gold.jpg";
 import quartzImage from "@/assets/quartz-sample.jpg";
 
@@ -28,6 +36,10 @@ const WhyChooseSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
+
   return (
     <section id="ly-do" className="py-24 relative overflow-hidden" ref={ref}>
       {/* Background Image */}
@@ -52,31 +64,43 @@ const WhyChooseSection = () => {
           </h2>
         </motion.div>
 
-        {/* Reasons Grid - 4 columns with images */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {reasons.map((reason, index) => (
-            <motion.div
-              key={reason.title}
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-            >
-              <div className="border-4 border-[#f9d577] bg-white">
-                <div className="p-2 pb-0">
-                  <img 
-                    src={reason.image} 
-                    alt={reason.title}
-                    className="w-full h-[200px] object-cover"
-                  />
-                </div>
-                <p className="text-[#1f4667] text-[14px] leading-relaxed px-4 py-4">
-                  {reason.title}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {/* Reasons Carousel */}
+        <motion.div
+          className="mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[autoplayPlugin.current]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {reasons.map((reason, index) => (
+                <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4">
+                  <div className="border-4 border-[#f9d577] bg-white">
+                    <div className="p-2 pb-0">
+                      <img 
+                        src={reason.image} 
+                        alt={reason.title}
+                        className="w-full h-[200px] object-cover"
+                      />
+                    </div>
+                    <p className="text-[#1f4667] text-[14px] leading-relaxed px-4 py-4">
+                      {reason.title}
+                    </p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2 bg-white/80 hover:bg-white" />
+            <CarouselNext className="right-2 bg-white/80 hover:bg-white" />
+          </Carousel>
+        </motion.div>
 
         {/* CTA Button */}
         <motion.div
