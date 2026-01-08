@@ -151,27 +151,22 @@ const WhyChooseSection = () => {
         >
           <a
             href="tel:0913522225"
-            className="group relative inline-flex items-center justify-center px-10 py-5 rounded-full text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="group relative inline-flex items-center justify-center px-12 py-5 rounded-full text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             style={{ fontFamily: "'Times New Roman', serif" }}
           >
-            {/* Animated gradient background */}
-            <span className="absolute inset-0 bg-gradient-to-r from-[#d4a84b] via-[#f9d577] to-[#d4a84b] bg-[length:200%_100%] animate-[shimmer_4s_ease-in-out_infinite]" />
+            {/* Animated gradient background - Red/Orange for urgency */}
+            <span className="absolute inset-0 bg-gradient-to-r from-[#e63946] via-[#ff6b6b] to-[#e63946] bg-[length:200%_100%] animate-[shimmer_4s_ease-in-out_infinite]" />
             
             {/* Glow effect */}
-            <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[#d4a84b]/40 via-[#f9d577]/40 to-[#d4a84b]/40 blur-xl" />
+            <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[#e63946]/50 via-[#ff6b6b]/50 to-[#e63946]/50 blur-xl" />
             
             {/* Border */}
-            <span className="absolute inset-0 rounded-full border-2 border-[#1f4667]/20 group-hover:border-[#1f4667]/40 transition-colors duration-300" />
+            <span className="absolute inset-0 rounded-full border-2 border-white/30 group-hover:border-white/50 transition-colors duration-300" />
             
-            {/* Phone icon */}
-            <span className="relative flex items-center gap-3">
-              <svg className="w-6 h-6 text-[#1f4667]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <span className="flex flex-col items-center leading-tight text-[#1f4667]">
-                <span className="text-base md:text-lg font-bold tracking-wide">TƯ VẤN & MẪU ĐÁ CHUẨN CÔNG TRÌNH</span>
-                <span className="text-sm md:text-base font-semibold">CẦU THANG – THANG MÁY</span>
-              </span>
+            {/* Text */}
+            <span className="relative flex flex-col items-center leading-tight text-white">
+              <span className="text-base md:text-lg font-bold tracking-wide">TƯ VẤN & MẪU ĐÁ CHUẨN CÔNG TRÌNH</span>
+              <span className="text-sm md:text-base font-semibold">CẦU THANG – THANG MÁY</span>
             </span>
           </a>
         </motion.div>
