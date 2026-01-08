@@ -62,16 +62,18 @@ const WhyChooseSection = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
             >
-              <div className="border-4 border-[#f9d577] p-2 mb-4">
-                <img 
-                  src={reason.image} 
-                  alt={reason.title}
-                  className="w-full h-[200px] object-cover"
-                />
+              <div className="border-4 border-[#f9d577] bg-white">
+                <div className="p-2 pb-0">
+                  <img 
+                    src={reason.image} 
+                    alt={reason.title}
+                    className="w-full h-[200px] object-cover"
+                  />
+                </div>
+                <p className="text-[#1f4667] text-[14px] leading-relaxed px-4 py-4">
+                  {reason.title}
+                </p>
               </div>
-              <p className="text-white text-[14px] leading-relaxed px-2">
-                {reason.title}
-              </p>
             </motion.div>
           ))}
         </div>
