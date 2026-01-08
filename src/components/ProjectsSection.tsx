@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import elevatorImage from "@/assets/elevator-quartz.jpg";
@@ -80,27 +80,37 @@ const ProjectsSection = () => {
         </motion.div>
 
         {/* Masonry Grid */}
-        <motion.div
-          className="columns-2 md:columns-3 gap-4 mb-8"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          {currentProjects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white p-[5px] shadow-sm mb-4 break-inside-avoid"
-            >
-              <img
-                src={project.image}
-                alt={`Công trình ${index + 1}`}
-                className={`w-full object-cover ${
-                  project.size === "tall" ? "aspect-[3/4]" : "aspect-square"
-                }`}
-              />
-            </div>
-          ))}
-        </motion.div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            className="columns-2 md:columns-3 gap-4 mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+          >
+            {currentProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-[5px] shadow-sm mb-4 break-inside-avoid overflow-hidden group cursor-pointer"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={`Công trình ${index + 1}`}
+                    className={`w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110 ${
+                      project.size === "tall" ? "aspect-[3/4]" : "aspect-square"
+                    }`}
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
 
         {/* CTA Button */}
         <motion.div
