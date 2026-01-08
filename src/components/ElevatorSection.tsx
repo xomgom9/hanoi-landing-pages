@@ -45,14 +45,14 @@ const ElevatorSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-2 rounded-full border border-primary/30 text-primary text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-[#f9d577] text-[#1f4667] text-[18px] font-medium mb-4">
             Ứng dụng
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Ốp Thang Máy <span className="text-gradient-gold">Đá Thạch Anh</span>
+          <h2 className="text-[44px] font-bold mb-4" style={{ color: '#f9d577' }}>
+            Ốp Thang Máy Đá Thạch Anh
           </h2>
           <div className="divider-gold mt-6" />
-          <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
+          <p className="text-white text-[21px] mt-6 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             Giải pháp cho nhà có thang máy gia đình – nâng tầm thẩm mỹ & độ bền
           </p>
         </motion.div>
