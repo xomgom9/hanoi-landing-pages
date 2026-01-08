@@ -81,9 +81,9 @@ const SampleSection = () => {
             <CarouselContent className="-ml-4">
               {samples.map((sample, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/3">
-                  <div className="relative">
-                    {/* Sample Name & Code - Top Right */}
-                    <div className="absolute top-4 right-4 text-right z-10">
+                  <div className="relative group">
+                    {/* Sample Name & Code - Top Right with blur background */}
+                    <div className="absolute top-4 right-4 text-right z-10 bg-black/50 backdrop-blur-sm px-3 py-2 rounded-lg">
                       <p className="text-white italic text-[16px]" style={{ fontFamily: "'Times New Roman', serif" }}>
                         {sample.name}
                       </p>
@@ -92,12 +92,12 @@ const SampleSection = () => {
                       </p>
                     </div>
                     
-                    {/* Image with white border */}
-                    <div className="bg-white p-[5px]">
+                    {/* Image with white border and hover zoom */}
+                    <div className="bg-white p-[5px] overflow-hidden">
                       <img
                         src={sample.image}
                         alt={sample.name}
-                        className="w-full aspect-[3/4] object-cover"
+                        className="w-full aspect-[3/4] object-cover transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
                   </div>
