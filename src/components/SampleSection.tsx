@@ -1,29 +1,43 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Eye, Palette, Users, Gift } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import quartzSample from "@/assets/quartz-sample.jpg";
+import staircaseImage from "@/assets/staircase-gold.jpg";
+import elevatorImage from "@/assets/elevator-quartz.jpg";
 
-const reasons = [
+const samples = [
   {
-    icon: Eye,
-    title: "XEM vân đá thật rõ hơn ảnh",
-    description: "Vân đá ngoài đời sắc nét, chân thực và thể hiện đúng chất liệu.",
+    image: quartzSample,
+    name: "Thạch anh Lapis Lazuli",
+    code: "G104LAP22B1",
   },
   {
-    icon: Palette,
-    title: "Biết ngay màu nào phù hợp nội thất",
-    description: "Khi đặt mẫu trực tiếp cạnh đồ nội thất, bạn có thể dễ dàng chọn được màu hài hòa nhất.",
+    image: staircaseImage,
+    name: "Thạch anh Xám Ngân Hà",
+    code: "C20322",
   },
   {
-    icon: Users,
-    title: "ĐƯỢC tư vấn chọn mẫu chuẩn không gian",
-    description: "Chuyên gia hỗ trợ đánh giá ánh sáng, diện tích, phong cách thiết kế để đề xuất mẫu đá phù hợp nhất.",
+    image: elevatorImage,
+    name: "Thạch anh Mã Não Đỏ",
+    code: "G104MND22B1",
   },
   {
-    icon: Gift,
-    title: "Hoàn toàn miễn phí 100%",
-    description: "Bạn được xem và so sánh mẫu trực tiếp mà không mất bất kỳ chi phí nào.",
+    image: quartzSample,
+    name: "Thạch anh Trắng Tuyết",
+    code: "G104TT22B1",
+  },
+  {
+    image: staircaseImage,
+    name: "Thạch anh Vàng Hoàng Kim",
+    code: "G104VHK22B1",
   },
 ];
 
@@ -31,69 +45,79 @@ const SampleSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: false })
+  );
+
   return (
     <section id="mau-da" className="py-24 section-navy" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+          <h2 className="text-[44px] mb-4" style={{ color: '#f9d577', fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             Mẫu Đá Chi Tiết
           </h2>
-          <div className="divider-gold mt-2" />
-          <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
-            4 Lý Do Bạn Nên Xem Vân Mẫu
-          </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Sample Image */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8 }}
+        {/* Samples Carousel */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[autoplayPlugin.current]}
+            className="w-full"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={quartzSample}
-                alt="Mẫu đá thạch anh"
-                className="w-full aspect-square object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-          </motion.div>
+            <CarouselContent className="-ml-4">
+              {samples.map((sample, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/3">
+                  <div className="relative">
+                    {/* Sample Name & Code - Top Right */}
+                    <div className="absolute top-4 right-4 text-right z-10">
+                      <p className="text-white italic text-[16px]" style={{ fontFamily: "'Times New Roman', serif" }}>
+                        {sample.name}
+                      </p>
+                      <p className="text-[#f9d577] font-semibold text-[14px]">
+                        {sample.code}
+                      </p>
+                    </div>
+                    
+                    {/* Image with white border */}
+                    <div className="bg-white p-[5px]">
+                      <img
+                        src={sample.image}
+                        alt={sample.name}
+                        className="w-full aspect-[3/4] object-cover"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2 bg-white border-[#1f4667] text-[#1f4667] hover:bg-[#1f4667] hover:text-white" />
+            <CarouselNext className="right-2 bg-white border-[#1f4667] text-[#1f4667] hover:bg-[#1f4667] hover:text-white" />
+          </Carousel>
+        </motion.div>
 
-          {/* Reasons */}
-          <div className="space-y-6">
-            {reasons.map((reason, index) => (
-              <motion.div
-                key={reason.title}
-                className="flex gap-4 p-5 rounded-xl bg-secondary/30 border border-border/50 card-hover"
-                initial={{ opacity: 0, x: 50 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              >
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
-                  <reason.icon className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-1">
-                    {reason.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {reason.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        {/* Gold Divider */}
+        <motion.div
+          className="mt-16"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="h-[3px] bg-[#f9d577] w-full" />
+        </motion.div>
       </div>
     </section>
   );
