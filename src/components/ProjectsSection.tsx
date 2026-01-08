@@ -5,6 +5,7 @@ import elevatorImage from "@/assets/elevator-quartz.jpg";
 import staircaseImage from "@/assets/staircase-gold.jpg";
 import heroImage from "@/assets/hero-staircase.jpg";
 import quartzImage from "@/assets/quartz-sample.jpg";
+import navyBgTexture from "@/assets/navy-bg-texture.jpg";
 
 const staircaseProjects = [
   { image: staircaseImage, size: "tall" },
@@ -32,8 +33,15 @@ const ProjectsSection = () => {
   const currentProjects = activeTab === "staircase" ? staircaseProjects : elevatorProjects;
 
   return (
-    <section id="cong-trinh" className="py-24 bg-[#f5f0e8]" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section id="cong-trinh" className="py-24 relative overflow-hidden" ref={ref}>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${navyBgTexture})` }}
+      />
+      <div className="absolute inset-0 bg-[#1f4667]/80" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div
           className="text-center mb-8"
