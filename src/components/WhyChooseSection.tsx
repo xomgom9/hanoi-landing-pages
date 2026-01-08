@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/carousel";
 import staircaseImage from "@/assets/staircase-gold.jpg";
 import quartzImage from "@/assets/quartz-sample.jpg";
+import elevatorImage from "@/assets/elevator-quartz.jpg";
+import heroImage from "@/assets/hero-staircase.jpg";
 
 const reasons = [
   {
@@ -29,6 +31,38 @@ const reasons = [
   {
     image: quartzImage,
     title: "Độ cứng bề mặt nổi trội – giữ vẻ đẹp khi sử dụng lâu dài.",
+  },
+  {
+    image: elevatorImage,
+    title: "Chống thấm, chống ố – bề mặt luôn sạch đẹp.",
+  },
+  {
+    image: heroImage,
+    title: "Đa dạng màu sắc – phù hợp mọi phong cách nội thất.",
+  },
+  {
+    image: staircaseImage,
+    title: "Dễ vệ sinh – chỉ cần lau nhẹ là sáng bóng.",
+  },
+  {
+    image: quartzImage,
+    title: "Chịu lực tốt – phù hợp khu vực có tần suất sử dụng cao.",
+  },
+  {
+    image: elevatorImage,
+    title: "Thi công nhanh – tiết kiệm thời gian hoàn thiện.",
+  },
+  {
+    image: heroImage,
+    title: "Bảo hành dài hạn – yên tâm sử dụng nhiều năm.",
+  },
+  {
+    image: staircaseImage,
+    title: "Đội ngũ chuyên nghiệp – tư vấn tận tâm.",
+  },
+  {
+    image: quartzImage,
+    title: "Giá cả hợp lý – chất lượng vượt trội.",
   },
 ];
 
