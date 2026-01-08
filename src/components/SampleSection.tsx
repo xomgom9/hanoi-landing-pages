@@ -50,7 +50,7 @@ const SampleSection = () => {
   );
 
   return (
-    <section id="mau-da" className="py-24 section-navy" ref={ref}>
+    <section id="mau-da" className="py-16 section-navy" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div

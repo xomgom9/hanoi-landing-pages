@@ -30,7 +30,7 @@ const OtherProductsSection = () => {
   );
 
   return (
-    <section className="py-24 bg-[#f5f0e8]" ref={ref}>
+    <section className="py-16 bg-[#f5f0e8]" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div

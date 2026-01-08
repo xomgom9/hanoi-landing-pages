@@ -41,7 +41,7 @@ const WhyChooseSection = () => {
   );
 
   return (
-    <section id="ly-do" className="py-24 relative overflow-hidden" ref={ref}>
+    <section id="ly-do" className="py-16 relative overflow-hidden" ref={ref}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
