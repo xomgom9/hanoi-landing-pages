@@ -39,7 +39,7 @@ const ProjectsSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${navyBgTexture})` }}
       />
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/80" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
