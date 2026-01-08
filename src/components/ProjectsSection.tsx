@@ -41,7 +41,7 @@ const ProjectsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[44px] mb-6" style={{ color: '#f9d577', fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
+          <h2 className="text-[44px] mb-6" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Công Trình Thực Tế Tiêu Biểu
           </h2>
         </motion.div>

@@ -40,7 +40,7 @@ const ReasonsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[44px] italic mb-4" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 400 }}>
+          <h2 className="text-[44px] mb-4" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             4 Lý Do
           </h2>
           <p className="text-white text-2xl md:text-3xl font-semibold">
