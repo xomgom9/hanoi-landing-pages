@@ -44,7 +44,7 @@ const SampleSection = () => {
           <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Mẫu Đá Chi Tiết
           </h2>
-          <div className="divider-gold mt-6" />
+          <div className="divider-gold mt-2" />
           <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             4 Lý Do Bạn Nên Xem Vân Mẫu
           </p>
