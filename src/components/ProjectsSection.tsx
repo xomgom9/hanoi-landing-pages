@@ -133,12 +133,27 @@ const ProjectsSection = () => {
         >
           <a
             href="tel:0913522225"
-            className="inline-flex items-center justify-center bg-[#f9d577] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e6c569] transition-colors"
+            className="group relative inline-flex items-center justify-center px-10 py-5 rounded-full text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             style={{ fontFamily: "'Times New Roman', serif" }}
           >
-            <span className="flex flex-col items-center leading-tight text-red-600">
-              <span>TƯ VẤN & MẪU ĐÁ CHUẨN CÔNG TRÌNH</span>
-              <span>CẦU THANG – THANG MÁY</span>
+            {/* Animated gradient background */}
+            <span className="absolute inset-0 bg-gradient-to-r from-[#f9d577] via-[#ffeaa7] to-[#f9d577] bg-[length:200%_100%] animate-[shimmer_2s_ease-in-out_infinite]" />
+            
+            {/* Glow effect */}
+            <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[#f9d577]/50 via-[#ffeaa7]/50 to-[#f9d577]/50 blur-xl" />
+            
+            {/* Border pulse */}
+            <span className="absolute inset-0 rounded-full border-2 border-white/30 group-hover:border-white/60 transition-colors duration-300" />
+            
+            {/* Phone icon */}
+            <span className="relative flex items-center gap-3">
+              <svg className="w-6 h-6 text-red-600 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span className="flex flex-col items-center leading-tight text-red-600 drop-shadow-sm">
+                <span className="text-base md:text-lg font-bold tracking-wide">TƯ VẤN & MẪU ĐÁ CHUẨN CÔNG TRÌNH</span>
+                <span className="text-sm md:text-base font-semibold">CẦU THANG – THANG MÁY</span>
+              </span>
             </span>
           </a>
         </motion.div>
