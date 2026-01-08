@@ -139,8 +139,8 @@ const StaircaseSection = () => {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <span className="inline-flex items-center gap-2 text-primary font-medium">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <span className="inline-flex items-center gap-2 text-white font-medium">
+            <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
             Đã thi công thực tế nhiều công trình nhà phố & biệt thự tại Toàn Quốc
           </span>
         </motion.div>
