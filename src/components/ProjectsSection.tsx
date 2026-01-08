@@ -45,7 +45,7 @@ const ProjectsSection = () => {
             Công Trình Thực Tế Tiêu Biểu
           </h2>
           <div className="divider-gold mt-2" />
-          <p className="text-[#1f4667] text-[21px] mt-2 mb-4 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
+          <p className="text-white text-[21px] mt-2 mb-4 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             Những dự án đã hoàn thiện với đá thạch anh cao cấp
           </p>
         </motion.div>
