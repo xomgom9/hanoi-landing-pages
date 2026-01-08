@@ -42,7 +42,7 @@ const OtherProductsSection = () => {
           <span className="inline-block px-4 py-2 rounded-full bg-[#f9d577] text-[#1f4667] text-[18px] font-medium mb-2">
             SẢN PHẨM KHÁC
           </span>
-          <h2 className="text-[44px] mb-2" style={{ color: '#1f4667', fontFamily: "'Times New Roman', serif", fontWeight: 600, fontStyle: 'italic' }}>
+          <h2 className="text-[44px] mb-2" style={{ color: '#1f4667', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Đá Ốp Mặt Bếp Và Lavabo
           </h2>
         </motion.div>
