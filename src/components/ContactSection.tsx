@@ -59,7 +59,7 @@ const ContactSection = () => {
               </p>
 
               <a
-                href="tel:0913522225"
+                href="tel:0888061368"
                 className="flex items-center gap-4 p-4 rounded-xl bg-secondary/50 border border-border hover:border-primary transition-colors group"
               >
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
@@ -68,13 +68,13 @@ const ContactSection = () => {
                 <div>
                   <p className="text-sm text-muted-foreground">Hotline</p>
                   <p className="text-xl font-semibold text-primary group-hover:text-gold-light transition-colors">
-                    0913 522 225
+                    0888 061 368
                   </p>
                 </div>
               </a>
 
               <a
-                href="https://zalo.me/0913522225"
+                href="https://zalo.me/0888061368"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-secondary/50 border border-border hover:border-primary transition-colors group"
@@ -85,7 +85,7 @@ const ContactSection = () => {
                 <div>
                   <p className="text-sm text-muted-foreground">Zalo</p>
                   <p className="text-xl font-semibold text-primary group-hover:text-gold-light transition-colors">
-                    0913 522 225
+                    0888 061 368
                   </p>
                 </div>
               </a>

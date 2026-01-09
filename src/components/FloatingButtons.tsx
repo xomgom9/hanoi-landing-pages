@@ -5,7 +5,7 @@ const FloatingButtons = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
       <motion.a
-        href="https://zalo.me/0913522225"
+        href="https://zalo.me/0888061368"
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
@@ -19,7 +19,7 @@ const FloatingButtons = () => {
       </motion.a>
       
       <motion.a
-        href="tel:0913522225"
+        href="tel:0888061368"
         className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}

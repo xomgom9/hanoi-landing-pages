@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-staircase.jpg";
-const benefits = ["Sáng – Sang trọng, nâng tầm không gian nhà phố & biệt thự.", "Thạch anh giúp ổn định năng lượng, lan tỏa vượng khí cho trục cầu thang.", "Chống thấm ố – Bền đẹp vượt thời gian."];
+const benefits = [
+  "Công nghệ sản xuất hiện đại – Sản phẩm đạt chuẩn chất lượng quốc tế.",
+  "Độ cứng & bền bỉ – Chịu lực tốt, chống trầy xước hiệu quả.",
+  "Thi công dễ dàng – Tiết kiệm thời gian hoàn thiện công trình."
+];
 const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center">
       {/* Background Image */}
@@ -44,7 +48,7 @@ const HeroSection = () => {
         }} className="flex items-center gap-3 mb-8">
             <div className="h-px w-12 bg-primary" />
             <p className="text-primary font-semibold uppercase tracking-wider text-sm">
-              Cho Nhà Phố & Biệt Thự Tại Hà Nội
+              Golden Archi – Thương hiệu đá thạch anh cao cấp
             </p>
           </motion.div>
 

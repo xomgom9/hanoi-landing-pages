@@ -94,7 +94,7 @@ const WhyChooseSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
-            Lý do chọn Đá Thạch Anh Khang Minh
+            Lý do chọn Đá Thạch Anh (Terrazo) Golden Archi
           </h2>
           <div className="divider-gold mt-2" />
           <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
@@ -150,7 +150,7 @@ const WhyChooseSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <a
-            href="tel:0913522225"
+            href="tel:0888061368"
             className="group relative inline-flex items-center justify-center px-12 py-5 rounded-full text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             style={{ fontFamily: "'Times New Roman', serif" }}
           >
