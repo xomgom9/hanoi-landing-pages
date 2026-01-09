@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import StaircaseSection from "@/components/StaircaseSection";
 import ElevatorSection from "@/components/ElevatorSection";
@@ -8,10 +9,12 @@ import ReasonsSection from "@/components/ReasonsSection";
 import OtherProductsSection from "@/components/OtherProductsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FloatingButtons from "@/components/FloatingButtons";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
+      <Header />
       <HeroSection />
       <StaircaseSection />
       <ElevatorSection />
@@ -21,6 +24,7 @@ const Index = () => {
       <ReasonsSection />
       <OtherProductsSection />
       <TestimonialsSection />
+      <Footer />
       <FloatingButtons />
     </main>
   );
