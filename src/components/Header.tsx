@@ -63,20 +63,12 @@ const Header = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 z-10">
-            <div className="w-12 h-12 bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center">
-              <span className="text-navy font-bold text-2xl" style={{ fontFamily: "'Times New Roman', serif" }}>
-                KM
-              </span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-gold font-bold text-lg tracking-wide" style={{ fontFamily: "'Times New Roman', serif" }}>
-                KHANG MINH
-              </span>
-              <span className="block text-white/70 text-xs tracking-widest">
-                STONE
-              </span>
-            </div>
+          <a href="#" className="flex items-center z-10">
+            <img 
+              src="/src/assets/logo.png" 
+              alt="Golden Archi Logo" 
+              className="h-14 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Navigation */}
