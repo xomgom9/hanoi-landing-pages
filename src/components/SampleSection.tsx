@@ -16,28 +16,63 @@ import elevatorImage from "@/assets/elevator-quartz.jpg";
 const samples = [
   {
     image: quartzSample,
-    name: "Thạch anh Lapis Lazuli",
-    code: "G104LAP22B1",
+    name: "Bạch Thiên Thạch",
+    code: "Xem thêm",
   },
   {
     image: staircaseImage,
-    name: "Thạch anh Xám Ngân Hà",
-    code: "C20322",
+    name: "Thạch Hồn Ngọc",
+    code: "Xem thêm",
   },
   {
     image: elevatorImage,
-    name: "Thạch anh Mã Não Đỏ",
-    code: "G104MND22B1",
+    name: "Thạch Anh Tộc Mạnh",
+    code: "Xem thêm",
   },
   {
     image: quartzSample,
-    name: "Thạch anh Trắng Tuyết",
-    code: "G104TT22B1",
+    name: "Thác Loạn Thủ",
+    code: "Xem thêm",
   },
   {
     image: staircaseImage,
-    name: "Thạch anh Vàng Hoàng Kim",
-    code: "G104VHK22B1",
+    name: "Sapphyre",
+    code: "Xem thêm",
+  },
+  {
+    image: elevatorImage,
+    name: "Oceanwave",
+    code: "Xem thêm",
+  },
+  {
+    image: quartzSample,
+    name: "Ngọc Hoàng Dung",
+    code: "Xem thêm",
+  },
+  {
+    image: staircaseImage,
+    name: "Hải Mặc Hồ",
+    code: "Xem thêm",
+  },
+  {
+    image: elevatorImage,
+    name: "Đà Vàng Ngọc",
+    code: "Xem thêm",
+  },
+  {
+    image: quartzSample,
+    name: "Đà Vân Gỗ",
+    code: "Xem thêm",
+  },
+  {
+    image: staircaseImage,
+    name: "Hoa Mỹ Nữ",
+    code: "Xem thêm",
+  },
+  {
+    image: elevatorImage,
+    name: "Lam Azuki",
+    code: "Xem thêm",
   },
 ];
 
@@ -60,11 +95,11 @@ const SampleSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
-            Mẫu Đá Chi Tiết
+            Mẫu đá thạch anh (Terrazo)
           </h2>
           <div className="divider-gold mt-2" />
           <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
-            Khám phá bộ sưu tập đá thạch anh đa dạng màu sắc & vân đá
+            Đá Terrazzo – Sự tinh tế & độc bản cho công trình của bạn
           </p>
         </motion.div>
 
