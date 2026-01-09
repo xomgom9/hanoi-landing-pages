@@ -42,20 +42,12 @@ const Footer = () => {
           <div className="space-y-8">
             {/* Logo & Slogan */}
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center">
-                  <span className="text-navy font-bold text-2xl" style={{ fontFamily: "'Times New Roman', serif" }}>
-                    KM
-                  </span>
-                </div>
-                <div>
-                  <span className="text-navy font-bold text-xl tracking-wide" style={{ fontFamily: "'Times New Roman', serif" }}>
-                    KHANG MINH
-                  </span>
-                  <span className="block text-navy/60 text-xs tracking-widest">
-                    STONE
-                  </span>
-                </div>
+              <div className="mb-4">
+                <img 
+                  src="/src/assets/logo.png" 
+                  alt="Golden Archi Logo" 
+                  className="h-16 w-auto object-contain"
+                />
               </div>
               <p className="text-navy/70 italic text-lg" style={{ fontFamily: "'Times New Roman', serif" }}>
                 "Khơi nguồn giác quan, đánh thức cảm xúc"
