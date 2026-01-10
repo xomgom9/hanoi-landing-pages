@@ -96,20 +96,20 @@ const SampleSection = () => {
   );
 
   return (
-    <section id="mau-da" className="py-16 section-navy" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section id="mau-da" className="py-8 sm:py-12 md:py-16 section-navy" ref={ref}>
+      <div className="container mx-auto px-3 sm:px-4">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-6 sm:mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+          <h2 className="text-2xl sm:text-3xl md:text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Mẫu đá thạch anh (Terrazo)
           </h2>
           <div className="divider-gold mt-2" />
-          <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
+          <p className="text-white text-base sm:text-lg md:text-[21px] mt-2 max-w-2xl mx-auto px-2" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             Đá Terrazzo – Sự tinh tế & độc bản cho công trình của bạn
           </p>
         </motion.div>
@@ -128,16 +128,16 @@ const SampleSection = () => {
             plugins={[autoplayPlugin.current]}
             className="w-full"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-2 sm:-ml-4">
               {samples.map((sample, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/3">
+                <CarouselItem key={index} className="pl-2 sm:pl-4 basis-1/2 md:basis-1/3">
                   <div className="relative group">
                     {/* Sample Name & Code - Top Right with blur background */}
-                    <div className="absolute top-4 right-4 text-right z-10 bg-black/50 backdrop-blur-sm px-3 py-2 rounded-lg">
-                      <p className="text-white italic text-[16px]" style={{ fontFamily: "'Times New Roman', serif" }}>
+                    <div className="absolute top-2 right-2 sm:top-4 sm:right-4 text-right z-10 bg-black/50 backdrop-blur-sm px-2 py-1 sm:px-3 sm:py-2 rounded-lg">
+                      <p className="text-white italic text-xs sm:text-[16px]" style={{ fontFamily: "'Times New Roman', serif" }}>
                         {sample.name}
                       </p>
-                      <p className="text-[#f9d577] font-semibold text-[14px]">
+                      <p className="text-[#f9d577] font-semibold text-[10px] sm:text-[14px]">
                         {sample.code}
                       </p>
                     </div>

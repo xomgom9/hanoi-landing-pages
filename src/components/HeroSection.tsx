@@ -29,10 +29,10 @@ const HeroSection = () => {
         }} transition={{
           duration: 0.8
         }}>
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight mb-4 font-sans md:text-5xl text-left">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-2 sm:mb-4 font-sans text-left">
               Đá Thạch Anh Lát Cầu Thang
               <br />
-              <span className="text-gradient-gold text-6xl">& Ốp Thang Máy</span>
+              <span className="text-gradient-gold text-3xl sm:text-5xl md:text-6xl">& Ốp Thang Máy</span>
             </h1>
           </motion.div>
 
@@ -45,14 +45,14 @@ const HeroSection = () => {
         }} transition={{
           duration: 0.8,
           delay: 0.2
-        }} className="flex items-center gap-3 mb-8">
-            <div className="h-px w-12 bg-primary" />
-            <p className="text-primary font-semibold uppercase tracking-wider text-sm">
+        }} className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-8">
+            <div className="h-px w-8 sm:w-12 bg-primary" />
+            <p className="text-primary font-semibold uppercase tracking-wider text-xs sm:text-sm">
               Golden Archi – Thương hiệu đá thạch anh cao cấp
             </p>
           </motion.div>
 
-          <motion.ul className="flex flex-col gap-3 mb-10" initial={{
+          <motion.ul className="flex flex-col gap-2 sm:gap-3 mb-6 sm:mb-10" initial={{
           opacity: 0,
           y: 30
         }} animate={{
@@ -62,11 +62,11 @@ const HeroSection = () => {
           duration: 0.8,
           delay: 0.4
         }}>
-            {benefits.map((benefit, index) => <li key={index} className="flex items-center gap-3 bg-background/10 backdrop-blur-sm border border-primary/30 rounded-full px-5 py-2.5 w-fit">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Check className="w-3 h-3 text-primary" />
+            {benefits.map((benefit, index) => <li key={index} className="flex items-center gap-2 sm:gap-3 bg-background/10 backdrop-blur-sm border border-primary/30 rounded-full px-3 sm:px-5 py-1.5 sm:py-2.5 w-fit">
+                <div className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary" />
                 </div>
-                <span className="text-foreground/90 text-sm">{benefit}</span>
+                <span className="text-foreground/90 text-xs sm:text-sm">{benefit}</span>
               </li>)}
           </motion.ul>
 
@@ -80,11 +80,11 @@ const HeroSection = () => {
           duration: 0.8,
           delay: 0.6
         }}>
-            <a href="#contact" className="btn-gold rounded-full flex items-center justify-center gap-2 group">
+            <a href="#contact" className="btn-gold rounded-full flex items-center justify-center gap-2 group text-sm sm:text-base px-4 sm:px-8 py-3 sm:py-4">
               Liên hệ nhận mẫu đá miễn phí
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#mau-da" className="btn-outline-gold rounded-full text-center">
+            <a href="#mau-da" className="btn-outline-gold rounded-full text-center text-sm sm:text-base px-4 sm:px-8 py-3 sm:py-4">
               Cảm nhận chất Thạch anh
             </a>
           </motion.div>
