@@ -9,69 +9,80 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import quartzSample from "@/assets/quartz-sample.jpg";
-import staircaseImage from "@/assets/staircase-gold.jpg";
-import elevatorImage from "@/assets/elevator-quartz.jpg";
+
+// Import real stone images from Golden Archi
+import classicXamNganHa from "@/assets/stones/classic-xam-ngan-ha.jpg";
+import daMatHo from "@/assets/stones/da-mat-ho.jpg";
+import daHoaNuiLua from "@/assets/stones/da-hoa-nui-lua.jpg";
+import lapisLazuli from "@/assets/stones/lapis-lazuli.jpg";
+import maNaoDo from "@/assets/stones/ma-nao-do.jpg";
+import ngocHoangLong from "@/assets/stones/ngoc-hoang-long.jpg";
+import ngocHoanLongSan from "@/assets/stones/ngoc-hoan-long-san.jpg";
+import obsidian from "@/assets/stones/obsidian.jpg";
+import serpentine from "@/assets/stones/serpentine.jpg";
+import thachAnhTim from "@/assets/stones/thach-anh-tim.jpg";
+import thachAnhTocXanh from "@/assets/stones/thach-anh-toc-xanh.jpg";
+import thachAnhVang from "@/assets/stones/thach-anh-vang.jpg";
 
 const samples = [
   {
-    image: quartzSample,
-    name: "Bạch Thiên Thạch",
+    image: classicXamNganHa,
+    name: "Classic Xám Ngân Hà",
+    code: "C20322",
+  },
+  {
+    image: daMatHo,
+    name: "Đá Mắt Hổ",
     code: "Xem thêm",
   },
   {
-    image: staircaseImage,
-    name: "Thạch Hồn Ngọc",
+    image: daHoaNuiLua,
+    name: "Đá Hoa Núi Lửa",
     code: "Xem thêm",
   },
   {
-    image: elevatorImage,
-    name: "Thạch Anh Tộc Mạnh",
+    image: lapisLazuli,
+    name: "Đá Lapis Lazuli",
     code: "Xem thêm",
   },
   {
-    image: quartzSample,
-    name: "Thác Loạn Thủ",
+    image: maNaoDo,
+    name: "Đá Mã Não Đỏ",
     code: "Xem thêm",
   },
   {
-    image: staircaseImage,
-    name: "Sapphyre",
+    image: ngocHoangLong,
+    name: "Đá Ngọc Hoàng Long",
     code: "Xem thêm",
   },
   {
-    image: elevatorImage,
-    name: "Oceanwave",
+    image: ngocHoanLongSan,
+    name: "Ngọc Hoàn Long",
+    code: "Lát sàn",
+  },
+  {
+    image: obsidian,
+    name: "Obsidian",
     code: "Xem thêm",
   },
   {
-    image: quartzSample,
-    name: "Ngọc Hoàng Dung",
+    image: serpentine,
+    name: "Serpentine",
     code: "Xem thêm",
   },
   {
-    image: staircaseImage,
-    name: "Hải Mặc Hồ",
+    image: thachAnhTim,
+    name: "Thạch Anh Tím",
     code: "Xem thêm",
   },
   {
-    image: elevatorImage,
-    name: "Đà Vàng Ngọc",
+    image: thachAnhTocXanh,
+    name: "Thạch Anh Tóc Xanh",
     code: "Xem thêm",
   },
   {
-    image: quartzSample,
-    name: "Đà Vân Gỗ",
-    code: "Xem thêm",
-  },
-  {
-    image: staircaseImage,
-    name: "Hoa Mỹ Nữ",
-    code: "Xem thêm",
-  },
-  {
-    image: elevatorImage,
-    name: "Lam Azuki",
+    image: thachAnhVang,
+    name: "Thạch Anh Vàng",
     code: "Xem thêm",
   },
 ];
