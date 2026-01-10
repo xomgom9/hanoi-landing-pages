@@ -8,6 +8,7 @@ import ReasonsSection from "@/components/ReasonsSection";
 import OtherProductsSection from "@/components/OtherProductsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FloatingButtons from "@/components/FloatingButtons";
+import EmbeddedWebsiteSection from "@/components/EmbeddedWebsiteSection";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <ReasonsSection />
       <OtherProductsSection />
       <TestimonialsSection />
+      <EmbeddedWebsiteSection />
       <FloatingButtons />
     </main>
   );
