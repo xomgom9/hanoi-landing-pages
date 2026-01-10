@@ -9,16 +9,26 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import quartzSample from "@/assets/quartz-sample.jpg";
-import staircaseImage from "@/assets/staircase-gold.jpg";
-import elevatorImage from "@/assets/elevator-quartz.jpg";
+
+// Import real kitchen and lavabo images
+import banBepAmarcord from "@/assets/kitchen/ban-bep-amarcord.jpg";
+import banBepBlueRoma from "@/assets/kitchen/ban-bep-blue-roma.jpg";
+import banBepVivalioro from "@/assets/kitchen/ban-bep-vivalioro.jpg";
+import banBepArabescato from "@/assets/kitchen/ban-bep-arabescato.jpg";
+import banBepCovelani from "@/assets/kitchen/ban-bep-covelani.jpg";
+import banBepGreyMonet from "@/assets/kitchen/ban-bep-grey-monet.jpg";
+import lavaboBlueRoma from "@/assets/kitchen/lavabo-blue-roma.jpg";
+import lavaboBeverlyBlue from "@/assets/kitchen/lavabo-beverly-blue.jpg";
 
 const products = [
-  { image: quartzSample },
-  { image: staircaseImage },
-  { image: elevatorImage },
-  { image: quartzSample },
-  { image: staircaseImage },
+  { image: banBepAmarcord, name: "Bàn bếp Amarcord", type: "Mặt bếp" },
+  { image: lavaboBlueRoma, name: "Đá Blue Roma", type: "Lavabo" },
+  { image: banBepVivalioro, name: "Bàn bếp Vivalioro", type: "Mặt bếp" },
+  { image: lavaboBeverlyBlue, name: "Đá Beverly Blue", type: "Lavabo" },
+  { image: banBepArabescato, name: "Bàn bếp Arabescato", type: "Mặt bếp" },
+  { image: banBepBlueRoma, name: "Đá Blue Roma", type: "Mặt bếp" },
+  { image: banBepCovelani, name: "Bàn bếp Covelani", type: "Mặt bếp" },
+  { image: banBepGreyMonet, name: "Bàn bếp Grey Monet", type: "Mặt bếp" },
 ];
 
 const OtherProductsSection = () => {
@@ -45,6 +55,9 @@ const OtherProductsSection = () => {
           <h2 className="text-[44px] mb-2" style={{ color: '#1f4667', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Đá Ốp Mặt Bếp Và Lavabo
           </h2>
+          <p className="text-[#1f4667]/80 text-[18px] mt-2 max-w-2xl mx-auto">
+            Đá thạch anh cao cấp cho không gian bếp sang trọng và hiện đại
+          </p>
         </motion.div>
 
         {/* Products Carousel */}
@@ -64,12 +77,19 @@ const OtherProductsSection = () => {
             <CarouselContent className="-ml-4">
               {products.map((product, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/3">
-                  <div className="group overflow-hidden">
+                  <div className="group overflow-hidden relative bg-white shadow-lg">
                     <img
                       src={product.image}
-                      alt={`Sản phẩm ${index + 1}`}
+                      alt={product.name}
                       className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-110"
                     />
+                    {/* Overlay with product info */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                      <div>
+                        <span className="text-[#f9d577] text-sm font-medium">{product.type}</span>
+                        <p className="text-white font-semibold">{product.name}</p>
+                      </div>
+                    </div>
                   </div>
                 </CarouselItem>
               ))}
