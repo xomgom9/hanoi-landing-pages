@@ -1,28 +1,50 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import elevatorImage from "@/assets/elevator-quartz.jpg";
-import staircaseImage from "@/assets/staircase-gold.jpg";
-import heroImage from "@/assets/hero-staircase.jpg";
-import quartzImage from "@/assets/quartz-sample.jpg";
 import navyBgTexture from "@/assets/navy-bg-texture.jpg";
 
+// Import staircase project images
+import cauThangXamNganHa01 from "@/assets/projects/cau-thang-xam-ngan-ha-01.jpg";
+import cauThangXamNganHa02 from "@/assets/projects/cau-thang-xam-ngan-ha-02.jpg";
+import cauThangXamNganHa03 from "@/assets/projects/cau-thang-xam-ngan-ha-03.jpg";
+import cauThangLongBien01 from "@/assets/projects/cau-thang-long-bien-01.jpg";
+import cauThangLongBien02 from "@/assets/projects/cau-thang-long-bien-02.jpg";
+import cauThangLongBien03 from "@/assets/projects/cau-thang-long-bien-03.jpg";
+import cauThangPhuTho01 from "@/assets/projects/cau-thang-phu-tho-01.jpg";
+import cauThangPhuTho02 from "@/assets/projects/cau-thang-phu-tho-02.jpg";
+import cauThangPhuTho03 from "@/assets/projects/cau-thang-phu-tho-03.jpg";
+
+// Import floor project images  
+import sanVinLongBien01 from "@/assets/projects/san-vin-long-bien-01.jpg";
+import sanVinLongBien02 from "@/assets/projects/san-vin-long-bien-02.jpg";
+
+// Import stone images for elevator/floor display
+import ngocHoanLongSan from "@/assets/stones/ngoc-hoan-long-san.jpg";
+import obsidian from "@/assets/stones/obsidian.jpg";
+import serpentine from "@/assets/stones/serpentine.jpg";
+import thachAnhTim from "@/assets/stones/thach-anh-tim.jpg";
+import thachAnhVang from "@/assets/stones/thach-anh-vang.jpg";
+
 const staircaseProjects = [
-  { image: staircaseImage, size: "tall" },
-  { image: heroImage, size: "normal" },
-  { image: quartzImage, size: "normal" },
-  { image: staircaseImage, size: "normal" },
-  { image: heroImage, size: "tall" },
-  { image: quartzImage, size: "normal" },
+  { image: cauThangXamNganHa01, size: "tall", name: "Cầu thang Xám Ngân Hà" },
+  { image: cauThangLongBien01, size: "normal", name: "Công trình Long Biên" },
+  { image: cauThangPhuTho01, size: "normal", name: "Công trình Phú Thọ" },
+  { image: cauThangXamNganHa02, size: "normal", name: "Cầu thang Xám Ngân Hà" },
+  { image: cauThangLongBien02, size: "tall", name: "Công trình Long Biên" },
+  { image: cauThangPhuTho02, size: "normal", name: "Công trình Phú Thọ" },
+  { image: cauThangXamNganHa03, size: "normal", name: "Cầu thang Xám Ngân Hà" },
+  { image: cauThangLongBien03, size: "tall", name: "Công trình Long Biên" },
+  { image: cauThangPhuTho03, size: "normal", name: "Công trình Phú Thọ" },
 ];
 
 const elevatorProjects = [
-  { image: elevatorImage, size: "normal" },
-  { image: quartzImage, size: "tall" },
-  { image: elevatorImage, size: "normal" },
-  { image: quartzImage, size: "normal" },
-  { image: elevatorImage, size: "normal" },
-  { image: quartzImage, size: "tall" },
+  { image: sanVinLongBien01, size: "normal", name: "Sàn Vin Long Biên" },
+  { image: ngocHoanLongSan, size: "tall", name: "Ngọc Hoàn Long - Lát sàn" },
+  { image: sanVinLongBien02, size: "normal", name: "Sàn Vin Long Biên" },
+  { image: obsidian, size: "normal", name: "Obsidian - Lát sàn" },
+  { image: serpentine, size: "tall", name: "Serpentine - Lát sàn" },
+  { image: thachAnhTim, size: "normal", name: "Thạch Anh Tím" },
+  { image: thachAnhVang, size: "normal", name: "Thạch Anh Vàng" },
 ];
 
 const ProjectsSection = () => {
@@ -86,7 +108,7 @@ const ProjectsSection = () => {
               }`}
               style={{ fontFamily: "'Times New Roman', serif" }}
             >
-              THANG MÁY
+              LÁT SÀN
             </button>
           </div>
         </motion.div>
@@ -110,14 +132,18 @@ const ProjectsSection = () => {
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="overflow-hidden">
+                <div className="overflow-hidden relative">
                   <img
                     src={project.image}
-                    alt={`Công trình ${index + 1}`}
+                    alt={project.name}
                     className={`w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110 ${
                       project.size === "tall" ? "aspect-[3/4]" : "aspect-square"
                     }`}
                   />
+                  {/* Hover overlay with name */}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                    <p className="text-white text-sm font-medium">{project.name}</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -132,7 +158,7 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <a
-            href="tel:0913522225"
+            href="tel:0888061368"
             className="group relative inline-flex items-center justify-center px-12 py-5 rounded-full text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             style={{ fontFamily: "'Times New Roman', serif" }}
           >
@@ -148,7 +174,7 @@ const ProjectsSection = () => {
             {/* Text */}
             <span className="relative flex flex-col items-center leading-tight text-white">
               <span className="text-base md:text-lg font-bold tracking-wide">TƯ VẤN & MẪU ĐÁ CHUẨN CÔNG TRÌNH</span>
-              <span className="text-sm md:text-base font-semibold">CẦU THANG – THANG MÁY</span>
+              <span className="text-sm md:text-base font-semibold">CẦU THANG – THANG MÁY – LÁT SÀN</span>
             </span>
           </a>
         </motion.div>
