@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Sun, Heart, Droplets, Clock } from "lucide-react";
-import elevatorImage from "@/assets/elevator-quartz.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +9,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+
+// Import stone images for elevator/floor applications
+import ngocHoanLongSan from "@/assets/stones/ngoc-hoan-long-san.jpg";
+import obsidian from "@/assets/stones/obsidian.jpg";
+import serpentine from "@/assets/stones/serpentine.jpg";
+import thachAnhTim from "@/assets/stones/thach-anh-tim.jpg";
+import thachAnhVang from "@/assets/stones/thach-anh-vang.jpg";
 
 const features = [
   {
@@ -47,11 +53,11 @@ const features = [
 ];
 
 const galleryImages = [
-  elevatorImage,
-  elevatorImage,
-  elevatorImage,
-  elevatorImage,
-  elevatorImage,
+  { image: ngocHoanLongSan, alt: "Ngọc Hoàn Long - Lát sàn" },
+  { image: obsidian, alt: "Obsidian - Ốp thang máy" },
+  { image: serpentine, alt: "Serpentine - Lát sàn" },
+  { image: thachAnhTim, alt: "Thạch Anh Tím - Lát sàn" },
+  { image: thachAnhVang, alt: "Thạch Anh Vàng - Lát sàn" },
 ];
 
 const ElevatorSection = () => {
@@ -89,12 +95,12 @@ const ElevatorSection = () => {
         >
           <Carousel className="w-full">
             <CarouselContent className="-ml-4">
-              {galleryImages.map((image, index) => (
+              {galleryImages.map((item, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/3">
                   <div className="bg-white p-[5px] rounded-none">
                     <img 
-                      src={image} 
-                      alt={`Ốp thang máy đá thạch anh ${index + 1}`} 
+                      src={item.image} 
+                      alt={item.alt} 
                       className="w-full aspect-square object-cover"
                     />
                   </div>

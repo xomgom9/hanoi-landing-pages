@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Sparkles, Compass, Crown, Shield } from "lucide-react";
-import staircaseImage from "@/assets/staircase-gold.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +9,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+
+// Import real project images
+import cauThangXamNganHa01 from "@/assets/projects/cau-thang-xam-ngan-ha-01.jpg";
+import cauThangXamNganHa02 from "@/assets/projects/cau-thang-xam-ngan-ha-02.jpg";
+import cauThangXamNganHa03 from "@/assets/projects/cau-thang-xam-ngan-ha-03.jpg";
+import cauThangLongBien01 from "@/assets/projects/cau-thang-long-bien-01.jpg";
+import cauThangLongBien02 from "@/assets/projects/cau-thang-long-bien-02.jpg";
 
 const features = [
   {
@@ -47,11 +53,11 @@ const features = [
 ];
 
 const galleryImages = [
-  staircaseImage,
-  staircaseImage,
-  staircaseImage,
-  staircaseImage,
-  staircaseImage,
+  { image: cauThangXamNganHa01, alt: "Cầu thang Xám Ngân Hà 01" },
+  { image: cauThangXamNganHa02, alt: "Cầu thang Xám Ngân Hà 02" },
+  { image: cauThangXamNganHa03, alt: "Cầu thang Xám Ngân Hà 03" },
+  { image: cauThangLongBien01, alt: "Cầu thang Long Biên 01" },
+  { image: cauThangLongBien02, alt: "Cầu thang Long Biên 02" },
 ];
 
 const StaircaseSection = () => {
@@ -115,12 +121,12 @@ const StaircaseSection = () => {
         >
           <Carousel className="w-full">
             <CarouselContent className="-ml-4">
-              {galleryImages.map((image, index) => (
+              {galleryImages.map((item, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/3">
                   <div className="bg-white p-[5px] rounded-none">
                     <img 
-                      src={image} 
-                      alt={`Cầu thang đá thạch anh ${index + 1}`} 
+                      src={item.image} 
+                      alt={item.alt} 
                       className="w-full aspect-square object-cover"
                     />
                   </div>
