@@ -31,26 +31,26 @@ const ReasonsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-16 section-navy" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section className="py-8 sm:py-12 md:py-16 section-navy" ref={ref}>
+      <div className="container mx-auto px-3 sm:px-4">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+          <h2 className="text-2xl sm:text-3xl md:text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             4 Lý Do
           </h2>
           <div className="divider-gold mt-2" />
-          <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
+          <p className="text-white text-base sm:text-lg md:text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             Bạn Nên Xem Vân Mẫu
           </p>
         </motion.div>
 
         {/* Reasons Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {reasons.map((reason, index) => (
             <motion.div
               key={index}
@@ -60,17 +60,17 @@ const ReasonsSection = () => {
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
               {/* Icon */}
-              <div className="w-20 h-20 mx-auto mb-6 border-2 border-[#f9d577] rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-[#f9d577] group-hover:scale-110">
-                <reason.icon className="w-10 h-10 text-[#f9d577] transition-colors duration-300 group-hover:text-[#1f4667]" strokeWidth={1.5} />
+              <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto mb-3 sm:mb-4 md:mb-6 border-2 border-[#f9d577] rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-[#f9d577] group-hover:scale-110">
+                <reason.icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#f9d577] transition-colors duration-300 group-hover:text-[#1f4667]" strokeWidth={1.5} />
               </div>
               
               {/* Title */}
-              <h3 className="text-[#f9d577] font-bold text-sm md:text-base mb-4 uppercase tracking-wide transition-transform duration-300 group-hover:scale-105">
+              <h3 className="text-[#f9d577] font-bold text-xs sm:text-sm md:text-base mb-2 sm:mb-3 md:mb-4 uppercase tracking-wide transition-transform duration-300 group-hover:scale-105">
                 {reason.title}
               </h3>
               
               {/* Description */}
-              <p className="text-gray-300 text-sm leading-relaxed transition-colors duration-300 group-hover:text-white">
+              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed transition-colors duration-300 group-hover:text-white">
                 {reason.description}
               </p>
             </motion.div>

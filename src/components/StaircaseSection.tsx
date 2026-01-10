@@ -65,46 +65,46 @@ const StaircaseSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="lat-cau-thang" className="py-16 section-navy" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section id="lat-cau-thang" className="py-8 sm:py-12 md:py-16 section-navy" ref={ref}>
+      <div className="container mx-auto px-3 sm:px-4">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-[#f9d577] text-[#1f4667] text-[18px] font-medium mb-2">
+          <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#f9d577] text-[#1f4667] text-sm sm:text-[18px] font-medium mb-2">
             Ứng dụng
           </span>
-          <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+          <h2 className="text-2xl sm:text-3xl md:text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Lát Cầu Thang Đá Thạch Anh
           </h2>
           <div className="divider-gold mt-2" />
-          <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
+          <p className="text-white text-base sm:text-lg md:text-[21px] mt-2 max-w-2xl mx-auto px-2" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             Phù hợp nhà đang hoàn thiện phần thô – hoàn thiện nội thất cầu thang bộ
           </p>
         </motion.div>
 
         {/* Features Grid 2x2 */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="space-y-3"
+              className="space-y-2 sm:space-y-3"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
             >
-              <div className="flex items-center gap-3">
-                <feature.icon className="w-5 h-5" style={{ color: '#f9d577' }} />
-                <h3 className="text-[18px] font-semibold" style={{ color: '#f9d57a' }}>
+              <div className="flex items-start sm:items-center gap-2 sm:gap-3">
+                <feature.icon className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-0" style={{ color: '#f9d577' }} />
+                <h3 className="text-sm sm:text-base md:text-[18px] font-semibold" style={{ color: '#f9d57a' }}>
                   {feature.title}
                 </h3>
               </div>
-              <div className="space-y-1 pl-8">
+              <div className="space-y-1 pl-6 sm:pl-8">
                 {feature.points.map((point, pointIndex) => (
-                  <p key={pointIndex} className="text-[16px] text-white leading-relaxed">
+                  <p key={pointIndex} className="text-xs sm:text-sm md:text-[16px] text-white leading-relaxed">
                     – {point}
                   </p>
                 ))}
@@ -120,10 +120,10 @@ const StaircaseSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <Carousel className="w-full">
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-2 sm:-ml-4">
               {galleryImages.map((item, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/3">
-                  <div className="bg-white p-[5px] rounded-none">
+                <CarouselItem key={index} className="pl-2 sm:pl-4 basis-1/2 md:basis-1/3">
+                  <div className="bg-white p-[3px] sm:p-[5px] rounded-none">
                     <img 
                       src={item.image} 
                       alt={item.alt} 

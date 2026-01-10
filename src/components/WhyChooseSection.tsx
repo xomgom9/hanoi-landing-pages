@@ -84,7 +84,7 @@ const WhyChooseSection = () => {
   );
 
   return (
-    <section id="ly-do" className="py-16 relative overflow-hidden" ref={ref}>
+    <section id="ly-do" className="py-8 sm:py-12 md:py-16 relative overflow-hidden" ref={ref}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -94,19 +94,19 @@ const WhyChooseSection = () => {
         }}
       />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-3 sm:px-4 relative z-10">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[44px] mb-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+          <h2 className="text-xl sm:text-2xl md:text-[44px] mb-2 px-2" style={{ color: '#f9d577', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Lý do chọn Đá Thạch Anh (Terrazo) Golden Archi
           </h2>
           <div className="divider-gold mt-2" />
-          <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
+          <p className="text-white text-sm sm:text-lg md:text-[21px] mt-2 max-w-2xl mx-auto px-2" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
             Tối ưu thẩm mỹ, độ bền, khả năng vệ sinh và tính đồng bộ cho nhiều phong cách thiết kế
           </p>
         </motion.div>
@@ -126,11 +126,11 @@ const WhyChooseSection = () => {
             plugins={[autoplayPlugin.current]}
             className="w-full"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-2 sm:-ml-4">
               {reasons.map((reason, index) => (
-                <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4">
-                  <div className="border-4 border-[#f9d577] bg-white h-full flex flex-col">
-                    <div className="p-2 pb-0">
+                <CarouselItem key={index} className="pl-2 sm:pl-4 basis-1/2 sm:basis-1/2 lg:basis-1/4">
+                  <div className="border-2 sm:border-4 border-[#f9d577] bg-white h-full flex flex-col">
+                    <div className="p-1 sm:p-2 pb-0">
                       <div className="aspect-square overflow-hidden">
                         <img 
                           src={reason.image} 
@@ -139,7 +139,7 @@ const WhyChooseSection = () => {
                         />
                       </div>
                     </div>
-                    <p className="text-[#1f4667] text-[14px] leading-relaxed px-4 py-4 flex-1 font-medium">
+                    <p className="text-[#1f4667] text-xs sm:text-[14px] leading-relaxed px-2 sm:px-4 py-2 sm:py-4 flex-1 font-medium">
                       {reason.title}
                     </p>
                   </div>
@@ -160,7 +160,7 @@ const WhyChooseSection = () => {
         >
           <a
             href="tel:0888061368"
-            className="group relative inline-flex items-center justify-center px-12 py-5 rounded-full text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="group relative inline-flex items-center justify-center px-6 sm:px-12 py-3 sm:py-5 rounded-full text-base sm:text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             style={{ fontFamily: "'Times New Roman', serif" }}
           >
             {/* Animated gradient background - Orange */}
@@ -174,8 +174,8 @@ const WhyChooseSection = () => {
             
             {/* Text */}
             <span className="relative flex flex-col items-center leading-tight text-white">
-              <span className="text-base md:text-lg font-bold tracking-wide">TƯ VẤN & MẪU ĐÁ CHUẨN CÔNG TRÌNH</span>
-              <span className="text-sm md:text-base font-semibold">CẦU THANG – THANG MÁY – LÁT SÀN</span>
+              <span className="text-xs sm:text-base md:text-lg font-bold tracking-wide">TƯ VẤN & MẪU ĐÁ CHUẨN CÔNG TRÌNH</span>
+              <span className="text-[10px] sm:text-sm md:text-base font-semibold">CẦU THANG – THANG MÁY – LÁT SÀN</span>
             </span>
           </a>
         </motion.div>

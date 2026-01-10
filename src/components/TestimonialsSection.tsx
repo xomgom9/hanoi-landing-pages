@@ -53,16 +53,16 @@ const TestimonialsSection = () => {
   );
 
   return (
-    <section className="py-16 bg-[#f5f0e8]" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section className="py-8 sm:py-12 md:py-16 bg-[#f5f0e8]" ref={ref}>
+      <div className="container mx-auto px-3 sm:px-4">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-6 sm:mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-[44px] mb-2" style={{ color: '#1f4667', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
+          <h2 className="text-2xl sm:text-3xl md:text-[44px] mb-2" style={{ color: '#1f4667', fontFamily: "'Times New Roman', serif", fontWeight: 600 }}>
             Feedback khách hàng
           </h2>
         </motion.div>
@@ -81,24 +81,24 @@ const TestimonialsSection = () => {
             plugins={[autoplayPlugin.current]}
             className="w-full"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-2 sm:-ml-4">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/3">
-                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 h-full border border-gray-200/50 shadow-sm">
+                <CarouselItem key={index} className="pl-2 sm:pl-4 basis-[85%] sm:basis-1/2 md:basis-1/3">
+                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 h-full border border-gray-200/50 shadow-sm">
                     {/* Name & Location */}
-                    <h3 className="text-[#1f4667] text-lg font-semibold text-center mb-2" style={{ fontFamily: "'Times New Roman', serif" }}>
+                    <h3 className="text-[#1f4667] text-base sm:text-lg font-semibold text-center mb-2" style={{ fontFamily: "'Times New Roman', serif" }}>
                       {testimonial.name}, {testimonial.location}
                     </h3>
                     
                     {/* Stars */}
-                    <div className="flex justify-center gap-1 mb-4">
+                    <div className="flex justify-center gap-0.5 sm:gap-1 mb-3 sm:mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-[#f9d577] text-[#f9d577]" />
+                        <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-[#f9d577] text-[#f9d577]" />
                       ))}
                     </div>
                     
                     {/* Quote */}
-                    <p className="text-gray-600 text-center text-sm leading-relaxed italic">
+                    <p className="text-gray-600 text-center text-xs sm:text-sm leading-relaxed italic">
                       "{testimonial.content}"
                     </p>
                   </div>
