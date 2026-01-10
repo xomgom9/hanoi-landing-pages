@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Phone } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
@@ -10,59 +9,69 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import staircaseImage from "@/assets/staircase-gold.jpg";
-import quartzImage from "@/assets/quartz-sample.jpg";
-import elevatorImage from "@/assets/elevator-quartz.jpg";
-import heroImage from "@/assets/hero-staircase.jpg";
+
+// Import real stone images
+import classicXamNganHa from "@/assets/stones/classic-xam-ngan-ha.jpg";
+import daMatHo from "@/assets/stones/da-mat-ho.jpg";
+import daHoaNuiLua from "@/assets/stones/da-hoa-nui-lua.jpg";
+import lapisLazuli from "@/assets/stones/lapis-lazuli.jpg";
+import maNaoDo from "@/assets/stones/ma-nao-do.jpg";
+import ngocHoangLong from "@/assets/stones/ngoc-hoang-long.jpg";
+import ngocHoanLongSan from "@/assets/stones/ngoc-hoan-long-san.jpg";
+import obsidian from "@/assets/stones/obsidian.jpg";
+import serpentine from "@/assets/stones/serpentine.jpg";
+import thachAnhTim from "@/assets/stones/thach-anh-tim.jpg";
+import thachAnhTocXanh from "@/assets/stones/thach-anh-toc-xanh.jpg";
+import thachAnhVang from "@/assets/stones/thach-anh-vang.jpg";
 
 const reasons = [
   {
-    image: staircaseImage,
+    image: ngocHoangLong,
+    title: "Vân đẹp – nhìn sang: Hạt đều, lên ảnh tốt.",
+  },
+  {
+    image: thachAnhVang,
+    title: "Dễ vệ sinh: Hạn chế bám bẩn, lau sạch nhanh.",
+  },
+  {
+    image: lapisLazuli,
+    title: "Thi công chuẩn: Bo cạnh, mạch ghép gọn gàng.",
+  },
+  {
+    image: thachAnhTocXanh,
+    title: "Tư vấn phối mẫu: Chọn theo không gian & ánh sáng.",
+  },
+  {
+    image: classicXamNganHa,
     title: "Thạch anh tự nhiên – nền tảng vững chắc cho công trình.",
   },
   {
-    image: quartzImage,
+    image: daMatHo,
     title: "Giữ sinh khí – mang lại cảm giác cân bằng và an tâm cho ngôi nhà.",
   },
   {
-    image: staircaseImage,
+    image: daHoaNuiLua,
     title: "Vân hạt phản sáng – diện mạo sang trọng và có chiều sâu.",
   },
   {
-    image: quartzImage,
+    image: maNaoDo,
     title: "Độ cứng bề mặt nổi trội – giữ vẻ đẹp khi sử dụng lâu dài.",
   },
   {
-    image: elevatorImage,
+    image: obsidian,
     title: "Chống thấm, chống ố – bề mặt luôn sạch đẹp.",
   },
   {
-    image: heroImage,
+    image: serpentine,
     title: "Đa dạng màu sắc – phù hợp mọi phong cách nội thất.",
   },
   {
-    image: staircaseImage,
-    title: "Dễ vệ sinh – chỉ cần lau nhẹ là sáng bóng.",
-  },
-  {
-    image: quartzImage,
+    image: thachAnhTim,
     title: "Chịu lực tốt – phù hợp khu vực có tần suất sử dụng cao.",
   },
   {
-    image: elevatorImage,
-    title: "Thi công nhanh – tiết kiệm thời gian hoàn thiện.",
-  },
-  {
-    image: heroImage,
+    image: ngocHoanLongSan,
     title: "Bảo hành dài hạn – yên tâm sử dụng nhiều năm.",
-  },
-  {
-    image: staircaseImage,
-    title: "Đội ngũ chuyên nghiệp – tư vấn tận tâm.",
-  },
-  {
-    image: quartzImage,
-    title: "Giá cả hợp lý – chất lượng vượt trội.",
   },
 ];
 
@@ -80,7 +89,7 @@ const WhyChooseSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: `url(${staircaseImage})`,
+          backgroundImage: `url(${classicXamNganHa})`,
           filter: 'brightness(0.3)'
         }}
       />
@@ -98,7 +107,7 @@ const WhyChooseSection = () => {
           </h2>
           <div className="divider-gold mt-2" />
           <p className="text-white text-[21px] mt-2 max-w-2xl mx-auto" style={{ fontFamily: "'Dancing Script', cursive", fontWeight: 400 }}>
-            Chất lượng vượt trội – Uy tín hàng đầu trong ngành đá ốp lát
+            Tối ưu thẩm mỹ, độ bền, khả năng vệ sinh và tính đồng bộ cho nhiều phong cách thiết kế
           </p>
         </motion.div>
 
@@ -119,7 +128,7 @@ const WhyChooseSection = () => {
           >
             <CarouselContent className="-ml-4">
               {reasons.map((reason, index) => (
-                <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4">
                   <div className="border-4 border-[#f9d577] bg-white h-full flex flex-col">
                     <div className="p-2 pb-0">
                       <div className="aspect-square overflow-hidden">
@@ -130,7 +139,7 @@ const WhyChooseSection = () => {
                         />
                       </div>
                     </div>
-                    <p className="text-[#1f4667] text-[14px] leading-relaxed px-4 py-4 flex-1">
+                    <p className="text-[#1f4667] text-[14px] leading-relaxed px-4 py-4 flex-1 font-medium">
                       {reason.title}
                     </p>
                   </div>
@@ -166,7 +175,7 @@ const WhyChooseSection = () => {
             {/* Text */}
             <span className="relative flex flex-col items-center leading-tight text-white">
               <span className="text-base md:text-lg font-bold tracking-wide">TƯ VẤN & MẪU ĐÁ CHUẨN CÔNG TRÌNH</span>
-              <span className="text-sm md:text-base font-semibold">CẦU THANG – THANG MÁY</span>
+              <span className="text-sm md:text-base font-semibold">CẦU THANG – THANG MÁY – LÁT SÀN</span>
             </span>
           </a>
         </motion.div>
