@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const EmbeddedWebsiteSection = () => {
   const [iframeError, setIframeError] = useState(false);
-  const websiteUrl = "https://goldenarchi.lovable.app";
+  const websiteUrl = "https://goldenarchi.vn";
 
   return (
     <section className="w-full py-12 bg-background">
